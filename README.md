@@ -1,9 +1,7 @@
-# Inverse-kinematic-modeling-using-robo-analyzer-
+# Forward-kinematics-using-robo-analyzer
 
- 
 ## AIM: 
-To analyze the inverse kinematics using DH parameters for a 3 dof planer and 3 dof articulated robot using roboanalyzer and polt the graph of joint angle for a given  input end effector position .
-
+To analyze the forward kinematics using DH paramerters for a 4 and 6 dof robot using roboanalyzer and polt the graph for link cordinates and joint angles.
 
 ### COMPONENTS REQUIRED:
 1.Robo analyzer software  
@@ -11,75 +9,67 @@ To analyze the inverse kinematics using DH parameters for a 3 dof planer and 3 d
 
 ### THEORY: 
   
-### Inverse Kinematics
+Forward Kinematics
+
+A manipulator is composed of serial links which are affixed to each other revolute or prismatic joints from the base frame through the endeffector. 
+Calculating the position and orientation of the endeffector in terms of the joint variables is called as forward kinematics. 
+In order to have forward kinematics for a robot mechanism in a systematic manner, one should use a suitable kinematics model. 
+Denavit-Hartenberg method that uses four parameters is the most common method for describing the robot kinematics. 
+These parameters ai1, α −,1idi and θ the link length, link twist, link offset and joint angle, respectively. 
+A coordinate frame is attached to each joint to determine DH parameters. Zi axis of the coordinate frame is pointing along the rotary or sliding direction general manipulator.
+
+Denavit Hartenberg Parameters
+With DH Parameters, solving for the Forward Kinematics is easy.  only need to take four parameters for each joint 
+i: θifor the joint angle, 
+αi for the link twist, 
+difor the link offset, and 
+ai for the link length. Once I’ve obtained them, I can just plug them in to this transformation matrix:
+
+
+![image](https://user-images.githubusercontent.com/36288975/170172719-ed7befc9-2894-4344-bfd5-be831bb05308.png)
+
+ ![image](https://user-images.githubusercontent.com/36288975/170172766-b8aeb788-7fd7-4de7-b340-f04656707ebd.png)
+
  
-
-Inverse kinematics is the use of kinematic equations to determine the motion of a robot to reach a desired position. For example, to perform automated bin picking, a robotic arm used in a manufacturing line needs precise motion from an initial position to a desired position between bins and manufacturing machines. The grasping end of a robot arm is designated as the end-effector. The robot configuration is a list of joint positions that are within the position limits of the robot model and do not violate any constraints the robot has.
-
- Most industrial robots are constructed of several independently controllable articulated joints. Each joint is connected to one or more of the other joints, sometimes in complex configurations. The end effector is attached at the end of the entire “kinematic chain”. When you move any one joint, this will affect the end effector’s pose in various ways.
-
-This means that there is no simple, direct relationship between the end effector position and any one particular joint.
-
-For example, if you want the robot’s end effector to move 1 mm linearly along the Z-axis, you may need to move all of the joints by a different amount.
-
-Finally, inverse kinematics algorithms calculate the exact position of each of the robot’s joints required to reach your desired end effector pose.
-
-### solving inverse kinematic model 
-![image](https://user-images.githubusercontent.com/36288975/170622829-3fe97ef7-8ef1-44af-afae-b0954871aa0c.png)
-
-
-![image](https://user-images.githubusercontent.com/36288975/170622902-f48fd9c7-f2ec-4fd5-904b-ea51be8298c3.png)
-
-![image](https://user-images.githubusercontent.com/36288975/170622934-a3fd7f77-7eb2-4408-b66d-d6e3adbd1f99.png)
-
-![image](https://user-images.githubusercontent.com/36288975/170622982-9c4d8b23-1563-4e17-9616-87bcc4f4501d.png)
-![image](https://user-images.githubusercontent.com/36288975/170623020-f27efc12-bb58-4f62-840d-af544ac6689e.png)
 
 ### PROCEDURE:
 
-
-
-
-
+1. open the roboanalyzer software.
+2. select the robot and its degrees of freedom.
+3. change the values with the link lenght wherever necessary.
+4. simulate the model for forward kinematics.
+5. plot the graph between the link and the joints.
+6. update the DH parameters of the link configuration and end effector configuration.
 
 
 
 ### SIMULATION 
- 
- 
- 
- 
- 
- 
- 
- ### PLOT 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
+#### 6 DOF
 
+![image](https://user-images.githubusercontent.com/74660507/170177164-3aff1758-89d2-4378-a358-86da308541c0.png)
+
+#### 4 DOF
  
+![WhatsApp Image 2022-05-25 at 9 32 27 AM](https://user-images.githubusercontent.com/74660507/170177239-ee5529fb-85c1-4c7b-a7a1-8fc76135333c.jpeg)
+
+### PLOT 
  
+#### 6 DOF
 
+![image](https://user-images.githubusercontent.com/70213227/170174722-a81f96da-e92a-4d68-b0fd-79c50bcf3919.png)
 
+![image](https://user-images.githubusercontent.com/70213227/170174755-15719cb2-af08-48f0-bb13-87c5115be669.png)
 
+![image](https://user-images.githubusercontent.com/70213227/170174849-142fab7b-61d8-43c1-bae7-41643aeafc85.png)
 
+#### 4 DOF
+
+![image](https://user-images.githubusercontent.com/70213227/170175025-07bb37e4-f842-497f-b014-13bc88d8da6d.png)
+
+![image](https://user-images.githubusercontent.com/70213227/170175000-7e58a8da-dd7e-4143-8d1f-d80911fabb30.png)
+
+![image](https://user-images.githubusercontent.com/70213227/170175056-8718371a-7f53-450c-a45b-8a2bf52956ea.png)
 
 
-
-
-
-
-
-
-
-
-### RESULTS :  
+### RESULTS : 
+Thus, the forward kinematics using DH paramerters for a 4 and 6 dof robot using roboanalyzer is analysed and the graph for link cordinates and joint angles is plotted.
